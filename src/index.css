@@ -1,0 +1,478 @@
+/* ============================================
+   منصة المسح والتطبيق - نظام إدارة البلدية
+   RTL Theme - Studio warm off-white + Navy + Gold
+   ============================================ */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.97 0.008 85);
+  --foreground: oklch(0.2 0.02 260);
+  --card: oklch(0.99 0.005 85);
+  --card-foreground: oklch(0.2 0.02 260);
+  --popover: oklch(0.99 0.005 85);
+  --popover-foreground: oklch(0.2 0.02 260);
+  --primary: oklch(0.25 0.06 265);
+  --primary-foreground: oklch(0.95 0.005 85);
+  --secondary: oklch(0.75 0.1 85);
+  --secondary-foreground: oklch(0.2 0.02 260);
+  --muted: oklch(0.93 0.01 85);
+  --muted-foreground: oklch(0.55 0.02 260);
+  --accent: oklch(0.8 0.08 85);
+  --accent-foreground: oklch(0.2 0.02 260);
+  --destructive: oklch(0.6 0.2 25);
+  --border: oklch(0.88 0.01 85);
+  --input: oklch(0.88 0.01 85);
+  --ring: oklch(0.25 0.06 265);
+  --chart-1: oklch(0.25 0.06 265);
+  --chart-2: oklch(0.75 0.1 85);
+  --chart-3: oklch(0.55 0.05 240);
+  --chart-4: oklch(0.7 0.08 70);
+  --chart-5: oklch(0.4 0.08 280);
+  --sidebar: oklch(0.22 0.05 265);
+  --sidebar-foreground: oklch(0.85 0.01 85);
+  --sidebar-primary: oklch(0.75 0.1 85);
+  --sidebar-primary-foreground: oklch(0.22 0.05 265);
+  --sidebar-accent: oklch(0.3 0.05 265);
+  --sidebar-accent-foreground: oklch(0.9 0.01 85);
+  --sidebar-border: oklch(0.3 0.05 265 / 0.6);
+  --sidebar-ring: oklch(0.75 0.1 85);
+}
+
+.dark {
+  --background: oklch(0.18 0.02 260);
+  --foreground: oklch(0.9 0.01 85);
+  --card: oklch(0.22 0.02 260);
+  --card-foreground: oklch(0.9 0.01 85);
+  --popover: oklch(0.22 0.02 260);
+  --popover-foreground: oklch(0.9 0.01 85);
+  --primary: oklch(0.75 0.1 85);
+  --primary-foreground: oklch(0.18 0.02 260);
+  --secondary: oklch(0.4 0.06 265);
+  --secondary-foreground: oklch(0.9 0.01 85);
+  --muted: oklch(0.25 0.02 260);
+  --muted-foreground: oklch(0.65 0.01 85);
+  --accent: oklch(0.3 0.05 265);
+  --accent-foreground: oklch(0.9 0.01 85);
+  --destructive: oklch(0.6 0.2 25);
+  --border: oklch(0.3 0.02 260);
+  --input: oklch(0.3 0.02 260);
+  --ring: oklch(0.75 0.1 85);
+  --chart-1: oklch(0.75 0.1 85);
+  --chart-2: oklch(0.45 0.06 265);
+  --chart-3: oklch(0.6 0.05 240);
+  --chart-4: oklch(0.7 0.08 70);
+  --chart-5: oklch(0.5 0.08 280);
+  --sidebar: oklch(0.12 0.02 260);
+  --sidebar-foreground: oklch(0.85 0.01 85);
+  --sidebar-primary: oklch(0.75 0.1 85);
+  --sidebar-primary-foreground: oklch(0.12 0.02 260);
+  --sidebar-accent: oklch(0.22 0.03 260);
+  --sidebar-accent-foreground: oklch(0.9 0.01 85);
+  --sidebar-border: oklch(0.25 0.02 260 / 0.6);
+  --sidebar-ring: oklch(0.75 0.1 85);
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Cairo", "Noto Sans Arabic", "Segoe UI", Tahoma, sans-serif;
+  }
+  button:not([disabled]), [role="button"]:not([disabled]) { cursor: pointer; }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: oklch(0.8 0.02 260); border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: oklch(0.6 0.03 260); }
+}
+
+/* ========== Print @media (AT ROOT LEVEL - outside @layer for max specificity) ========== */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+    font-family: "Cairo", "Noto Sans Arabic", Tahoma, sans-serif !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  @page { size: A4 portrait; margin: 10mm; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+  img { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+
+  /* Hide screen-only elements */
+  .no-print, .print-page-indicator { display: none !important; }
+  .no-screen { display: block !important; }
+
+  /* Print container - full width, no styling */
+  .print-container {
+    overflow: visible !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Each print-page gets a page break AFTER it */
+  .print-page {
+    page-break-after: always !important;
+    overflow: visible !important;
+    padding: 0 0 6mm 0 !important;
+    position: relative !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .print-page:last-child {
+    page-break-after: avoid !important;
+  }
+
+  /* Sections that should stay together - ONLY signature & letterhead */
+  .print-section-keep { page-break-inside: avoid !important; }
+  .print-content { overflow: visible !important; }
+
+  /* Orphan/widow control */
+  p, h1, h2, h3 { orphans: 2; widows: 2; }
+
+  /* Letterhead */
+  .print-letterhead {
+    padding-bottom: 6px;
+    border-bottom: 2px solid #1B2A4A !important;
+    margin-bottom: 8px;
+    page-break-inside: avoid !important;
+  }
+  .print-title-section { page-break-inside: avoid !important; }
+  .print-section-header { page-break-inside: avoid !important; }
+  .print-signature-grid { page-break-inside: avoid !important; }
+  .print-footer-content { page-break-inside: avoid !important; }
+  .print-barcode-grid { page-break-inside: avoid !important; }
+  .print-title { font-size: 18px; font-weight: bold; color: #1B2A4A !important; margin: 0; }
+  .print-subtitle { font-size: 11px; color: #1B2A4A !important; margin: 1px 0; }
+  .print-logo { width: 48px; height: 48px; flex-shrink: 0; }
+  .print-logo img { width: 100%; height: 100%; }
+  .print-header-line { height: 2px; background: #C9A84C !important; margin-bottom: 8px; }
+
+  /* Title */
+  .print-title-section { text-align: center; padding: 4px 0; margin-bottom: 10px; page-break-inside: avoid !important; }
+  .print-title-decoration { display: none; }
+  .print-doc-title { font-size: 14px; font-weight: bold; color: #1B2A4A !important; margin: 0 0 1px 0; }
+  .print-doc-number { font-size: 9px; color: #555 !important; margin: 0; }
+  .print-section-divider { height: 1px; background: #ddd !important; margin: 8px 0; }
+
+  /* Info grid - flex layout for reliable print page breaking */
+  .print-info-grid {
+    display: block;
+    margin-bottom: 8px;
+  }
+  .print-info-item {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+  }
+  .print-info-item:last-child { border-bottom: none; }
+  .print-info-label {
+    width: 35%;
+    flex-shrink: 0;
+    padding: 3px 6px;
+    font-size: 9px;
+    color: #555 !important;
+    background: #f9f9f9 !important;
+    border-left: 1px solid #ddd;
+    vertical-align: top;
+  }
+  .print-info-value {
+    flex: 1;
+    padding: 3px 6px;
+    font-size: 10px;
+    font-weight: 500;
+    vertical-align: top;
+  }
+
+  /* Template fields grid - bordered cells for print */
+  .print-fields-grid { display: block; margin-bottom: 8px; }
+  .print-field-row { display: flex; border: 1px solid #ddd !important; border-top: none !important; }
+  .print-field-row:first-child { border-top: 1px solid #ddd !important; }
+  .print-field-label {
+    width: 35%;
+    flex-shrink: 0;
+    padding: 3px 6px;
+    font-size: 9px;
+    color: #555 !important;
+    background: #f9f9f9 !important;
+    border-left: 1px solid #ddd !important;
+    display: flex;
+    align-items: center;
+  }
+  .print-field-value {
+    flex: 1;
+    padding: 3px 6px;
+    font-size: 10px;
+    font-weight: 500;
+    color: #111 !important;
+    white-space: pre-wrap;
+    line-height: 1.5;
+    word-wrap: break-word;
+  }
+  .print-field-value.print-field-empty {
+    color: #bbb !important;
+    letter-spacing: 2px;
+    font-family: monospace;
+  }
+
+  /* Section headers */
+  .print-section-header { display: flex; align-items: center; gap: 6px; margin-bottom: 8px; }
+  .print-section-line { flex: 1; height: 1px; background: #ccc !important; }
+  .print-section-title-text { font-size: 10px; color: #888 !important; white-space: nowrap; }
+
+  /* Signature */
+  .print-signature-grid { display: flex; justify-content: space-between; gap: 12px; margin-top: 6px; }
+  .print-signature-item { flex: 1; text-align: center; }
+  .print-signature-line { border-bottom: 1px solid #999; height: 40px; margin-bottom: 3px; }
+  .print-signature-label { font-size: 9px; color: #666 !important; margin: 0; }
+  .print-signature-sub { font-size: 7px; color: #999 !important; margin: 1px 0 0 0; }
+  .print-stamp { width: 44px; height: 44px; margin: 0 auto 3px auto; border: 2px solid #1B2A4A !important; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+
+  /* Barcode - SVG with explicit dimensions for print */
+  .print-barcode-grid { display: flex; align-items: center; gap: 16px; }
+  .print-barcode-item { display: flex; align-items: center; gap: 8px; }
+  .print-barcode-item-wide { flex: 1; flex-direction: column; align-items: stretch; }
+  .print-qr-box { width: 60px; height: 60px; border: 1px solid #ccc; padding: 1px; background: white; }
+  .print-barcode-svg-wrap { width: 100%; height: 36px; display: block; }
+  .print-barcode-svg-wrap svg { width: 100% !important; height: 100% !important; max-width: 100%; }
+  .print-barcode-number { font-size: 8px; text-align: center; color: #666 !important; margin: 1px 0 0 0; letter-spacing: 2px; font-family: monospace; }
+  .print-barcode-text { display: flex; flex-direction: column; gap: 1px; }
+
+  /* Footer page */
+  .print-footer-page { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 200px; }
+  .print-footer-divider { width: 60px; height: 2px; background: #C9A84C !important; margin-bottom: 12px; }
+  .print-footer-content { text-align: center; page-break-inside: avoid !important; }
+  .print-footer-logos { margin-bottom: 6px; }
+  .print-footer-logo { width: 28px; height: 28px; opacity: 0.4; }
+  .print-footer-title { font-size: 10px; font-weight: bold; color: #1B2A4A !important; margin: 0 0 4px 0; }
+  .print-footer-text { font-size: 8px; color: #777 !important; margin: 0 0 3px 0; }
+  .print-footer-date { font-size: 7px; color: #999 !important; margin: 0 0 1px 0; }
+  .print-footer-copyright { font-size: 7px; color: #bbb !important; margin: 0; }
+
+  /* Page numbers */
+  .no-screen { display: block; }
+  .print-page-number { text-align: center; font-size: 7px; color: #bbb !important; margin-top: 12px; padding-top: 6px; border-top: 1px solid #eee; }
+
+  /* Watermark */
+  .watermark-overlay { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-30deg); font-size: 36px; color: rgba(0,0,0,0.03) !important; font-weight: bold; pointer-events: none; z-index: 0; white-space: nowrap; }
+  .watermark-overlay::after { content: attr(data-watermark); }
+}
+
+/* ========== Utilities ========== */
+.glass { background: oklch(1 0 0 / 0.6); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid oklch(0.88 0.01 85 / 0.5); }
+.glass-dark { background: oklch(0.22 0.05 265 / 0.7); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border: 1px solid oklch(0.3 0.05 265 / 0.4); }
+.gold-text { color: oklch(0.65 0.1 85); }
+.gold-border { border-color: oklch(0.75 0.1 85 / 0.4); }
+.gold-bg { background-color: oklch(0.75 0.1 85 / 0.1); }
+.edge-3d { border: 1px solid oklch(0.88 0.01 85); box-shadow: 0 1px 2px oklch(0 0 0 / 0.04), 0 2px 4px oklch(0 0 0 / 0.02), inset 0 1px 0 oklch(1 0 0 / 0.8); }
+.edge-3d-sm { border: 1px solid oklch(0.88 0.01 85); box-shadow: 0 1px 2px oklch(0 0 0 / 0.03), inset 0 1px 0 oklch(1 0 0 / 0.7); }
+
+/* ========== Screen Preview ========== */
+.print-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+  overflow: visible;
+}
+
+.print-page {
+  padding: 32px 40px;
+  position: relative;
+  border-bottom: 2px dashed #d1d5db;
+}
+.print-page:last-child { border-bottom: none; }
+.print-page + .print-page { box-shadow: inset 0 8px 12px -8px rgba(0, 0, 0, 0.06); }
+
+.print-page-indicator {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  color: #9ca3af;
+  background: #f3f4f6;
+  padding: 2px 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  z-index: 10;
+}
+
+.watermark-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 48px;
+  color: rgba(0, 0, 0, 0.04);
+  font-weight: bold;
+  pointer-events: none;
+  z-index: 0;
+  white-space: nowrap;
+}
+.watermark-overlay::after { content: attr(data-watermark); }
+
+.print-letterhead {
+  padding-bottom: 10px;
+  border-bottom: 2px solid #1B2A4A;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+}
+.print-title { font-size: 18px; font-weight: bold; color: #1B2A4A; margin: 0; }
+.print-subtitle { font-size: 12px; color: #1B2A4A; margin: 2px 0; font-weight: 500; }
+.print-logo { width: 56px; height: 56px; flex-shrink: 0; }
+.print-logo img { width: 100%; height: 100%; }
+
+.print-header-line { height: 2px; background: #C9A84C; margin-bottom: 8px; }
+
+.print-title-section { text-align: center; padding: 8px 0 6px; margin-bottom: 12px; }
+.print-title-decoration { display: flex; align-items: center; justify-content: center; gap: 6px; margin-bottom: 4px; }
+.print-title-decoration-bottom { margin-top: 4px; margin-bottom: 0; }
+.print-title-dot { width: 4px; height: 4px; border-radius: 50%; background: #C9A84C; display: inline-block; }
+.print-title-dash { width: 40px; height: 1px; background: #d1d5db; display: inline-block; }
+.print-doc-title { font-size: 16px; font-weight: bold; color: #111; margin: 0 0 2px 0; }
+.print-doc-number { font-size: 10px; color: #666; margin: 0; }
+
+/* Info grid - table on screen for consistency with print */
+.print-info-grid {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  display: table;
+}
+.print-info-item { display: table-row; }
+.print-info-label {
+  display: table-cell;
+  width: 35%;
+  padding: 5px 8px;
+  font-size: 10px;
+  color: #666;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+.print-info-value {
+  display: table-cell;
+  padding: 5px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #111;
+  border: 1px solid #e5e7eb;
+  vertical-align: top;
+}
+
+.print-section-divider { height: 1px; background: #e5e7eb; margin: 10px 0; }
+
+/* Template fields grid - bordered cells like info-grid */
+.print-fields-grid { display: block; margin-bottom: 10px; }
+.print-field-row { display: flex; border: 1px solid #e5e7eb; border-top: none; }
+.print-field-row:first-child { border-top: 1px solid #e5e7eb; }
+.print-field-label {
+  width: 35%;
+  flex-shrink: 0;
+  padding: 5px 8px;
+  font-size: 10px;
+  color: #666;
+  background: #f9fafb;
+  border-left: 1px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+}
+.print-field-value {
+  flex: 1;
+  padding: 5px 8px;
+  font-size: 12px;
+  font-weight: 500;
+  color: #111;
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+.print-field-value.print-field-empty {
+  color: #bbb;
+  letter-spacing: 2px;
+  font-family: monospace;
+}
+
+.print-section-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+.print-section-line { flex: 1; height: 1px; background: #d1d5db; }
+.print-section-title-text { font-size: 11px; color: #888; white-space: nowrap; letter-spacing: 1px; }
+
+.print-signature-grid { display: flex; justify-content: space-between; gap: 16px; margin-top: 6px; }
+.print-signature-item { flex: 1; text-align: center; }
+.print-signature-line { border-bottom: 1px solid #9ca3af; height: 50px; margin-bottom: 4px; }
+.print-signature-label { font-size: 10px; color: #666; margin: 0; }
+.print-signature-sub { font-size: 8px; color: #999; margin: 2px 0 0 0; }
+.print-stamp { width: 50px; height: 50px; margin: 0 auto 4px auto; border: 2px solid #1B2A4A; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+
+.print-barcode-grid { display: flex; align-items: center; gap: 20px; }
+.print-barcode-item { display: flex; align-items: center; gap: 10px; }
+.print-barcode-item-wide { flex: 1; flex-direction: column; align-items: stretch; }
+.print-qr-box { width: 72px; height: 72px; border: 1px solid #d1d5db; padding: 2px; background: white; border-radius: 4px; }
+.print-barcode-svg-wrap { width: 100%; height: 42px; background: white; border: 1px solid #e5e7eb; border-radius: 4px; padding: 1px; }
+.print-barcode-number { font-size: 9px; text-align: center; color: #666; margin: 2px 0 0 0; letter-spacing: 2px; font-family: monospace; }
+.print-barcode-text { display: flex; flex-direction: column; gap: 1px; }
+
+.print-footer-page { padding: 40px; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 250px; }
+.print-footer-divider { width: 80px; height: 2px; background: #C9A84C; margin-bottom: 16px; }
+.print-footer-content { text-align: center; }
+.print-footer-logos { margin-bottom: 8px; }
+.print-footer-logo { width: 32px; height: 32px; opacity: 0.4; }
+.print-footer-title { font-size: 12px; font-weight: bold; color: #1B2A4A; margin: 0 0 6px 0; }
+.print-footer-text { font-size: 9px; color: #777; margin: 0 0 4px 0; line-height: 1.6; }
+.print-footer-date { font-size: 8px; color: #999; margin: 0 0 2px 0; }
+.print-footer-copyright { font-size: 8px; color: #bbb; margin: 0; }
+
+.no-screen { display: none; }
+
+[dir="rtl"] .rtl-flip { transform: scaleX(-1); }
+[dir="rtl"] .space-x-reverse > :not([hidden]) ~ :not([hidden]) { --tw-space-x-reverse: 1; }

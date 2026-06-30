@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="195" fill="#FAF8F5" stroke="#1B2A4A" stroke-width="3"/>
+  
+  <!-- Outer decorative ring -->
+  <circle cx="200" cy="200" r="180" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity="0.4"/>
+  
+  <!-- Inner decorative ring -->
+  <circle cx="200" cy="200" r="165" fill="none" stroke="#1B2A4A" stroke-width="0.8" opacity="0.15"/>
+  
+  <!-- Central dome / mosque shape -->
+  <path d="M135 260 L135 195 Q135 135 200 115 Q265 135 265 195 L265 260 Z" fill="#1B2A4A" opacity="0.95"/>
+  
+  <!-- Golden dome accent -->
+  <path d="M155 195 Q155 150 200 135 Q245 150 245 195" fill="none" stroke="#C9A84C" stroke-width="2.5"/>
+  
+  <!-- Building columns -->
+  <rect x="155" y="200" width="12" height="60" rx="2" fill="#FAF8F5" opacity="0.85"/>
+  <rect x="183" y="200" width="12" height="60" rx="2" fill="#FAF8F5" opacity="0.85"/>
+  <rect x="205" y="200" width="12" height="60" rx="2" fill="#FAF8F5" opacity="0.85"/>
+  <rect x="233" y="200" width="12" height="60" rx="2" fill="#FAF8F5" opacity="0.85"/>
+  
+  <!-- Arch door -->
+  <path d="M185 260 L185 240 Q200 220 215 240 L215 260 Z" fill="#C9A84C" opacity="0.6"/>
+  
+  <!-- Crescent moon (Islamic symbol) -->
+  <path d="M285 110 Q300 95 310 110 Q295 105 285 110Z" fill="#C9A84C"/>
+  <circle cx="298" cy="105" r="12" fill="#FAF8F5" stroke="#C9A84C" stroke-width="1.5"/>
+  <circle cx="302" cy="102" r="10" fill="#FAF8F5"/>
+  
+  <!-- Star -->
+  <polygon points="200,55 204,68 218,68 207,76 211,89 200,81 189,89 193,76 182,68 196,68" fill="#C9A84C"/>
+  
+  <!-- Olive branches (peace) -->
+  <!-- Left branch -->
+  <path d="M125 280 Q110 260 105 240 Q100 250 110 270 Q115 280 125 285" fill="none" stroke="#C9A84C" stroke-width="1.8"/>
+  <ellipse cx="108" cy="248" rx="5" ry="3" fill="#4A7C59" opacity="0.8" transform="rotate(-30 108 248)"/>
+  <ellipse cx="112" cy="260" rx="5" ry="3" fill="#4A7C59" opacity="0.8" transform="rotate(-20 112 260)"/>
+  <ellipse cx="118" cy="272" rx="4" ry="2.5" fill="#4A7C59" opacity="0.8" transform="rotate(-10 118 272)"/>
+  
+  <!-- Right branch -->
+  <path d="M275 280 Q290 260 295 240 Q300 250 290 270 Q285 280 275 285" fill="none" stroke="#C9A84C" stroke-width="1.8"/>
+  <ellipse cx="292" cy="248" rx="5" ry="3" fill="#4A7C59" opacity="0.8" transform="rotate(30 292 248)"/>
+  <ellipse cx="288" cy="260" rx="5" ry="3" fill="#4A7C59" opacity="0.8" transform="rotate(20 288 260)"/>
+  <ellipse cx="282" cy="272" rx="4" ry="2.5" fill="#4A7C59" opacity="0.8" transform="rotate(10 282 272)"/>
+  
+  <!-- Bottom text arc -->
+  <path id="text-arc" d="M100 340 Q200 370 300 340" fill="none" stroke="none"/>
+  <text font-size="24" font-weight="bold" fill="#1B2A4A" font-family="system-ui, sans-serif" text-anchor="middle">
+    <textPath href="#text-arc" startOffset="50%">بلدية طرابلس</textPath>
+  </text>
+  
+  <!-- Bottom line decoration -->
+  <line x1="140" y1="358" x2="260" y2="358" stroke="#C9A84C" stroke-width="1.5"/>
+  
+  <!-- Small dots on sides -->
+  <circle cx="130" cy="358" r="2.5" fill="#C9A84C"/>
+  <circle cx="270" cy="358" r="2.5" fill="#C9A84C"/>
+</svg>
